@@ -1,0 +1,777 @@
+/*すべてのページに適用される設定*/
+
+html{
+    font-size: 16px;
+    font-family:sans-serif;
+}
+*{
+    
+    box-sizing: border-box;
+}
+body{
+    margin:0 0 0 0;
+}
+
+p, li, td{
+    line-height: 1.7;
+}
+
+a:link{
+    color:#000000;
+    text-decoration:none;
+}
+a:visited{
+    color:#000000;
+    text-decoration: none;
+}
+a:hover{
+    color:#FF4F02;
+    text-decoration:underline;
+}
+a:active{
+    color:#FF4F02;
+    text-decoration:underline;
+}
+img{
+    max-width: 100%;
+}
+
+/*すべてのページに適用　ヘッダー */
+.header{
+    padding-top: 40px;
+    background-image: url(../image/yakiniku1.png);
+    background-repeat: repeat-x;
+}
+.logo{
+    text-align:center;
+}
+.nav{
+  font-size:  25px;
+  font-weight: bold;
+  color: #FF6600;
+  text-shadow: 1px 1px 2px silver;
+  font-weight: bold;
+}
+.nav ul{
+    margin: 50px 0 0 0;
+    padding: 0;
+    list-style-type: none;
+
+    display: flex;
+    justify-content: center;
+    gap:40px;
+}
+.nav a:link{
+    color:#000000;
+}
+.nav a:visited{
+    color:#000000;
+}
+.nav a:hover{
+    text-decoration: none;
+}
+.nav a:active{
+    text-decoration: none;
+}
+.fade-in-text1 {
+  position: relative;
+  font-size: 25px;
+  opacity: 0; /* 初めは透明に設定 */
+  transform: translateY(100%); /* 下からスライドするために位置を下に設定 */
+  animation: fadeInFromBottom 1s forwards; /* フェードインアニメーションの設定 */
+}
+
+@keyframes fadeInFromBottom {
+  to {
+    opacity: 1; /* アニメーション終了時に完全に表示 */
+    transform: translateY(0); /* アニメーション終了時の位置 */
+  }
+}
+
+/*すべてのページに適用　ヒーロー */
+.hero{
+  color: #fff;
+  text-shadow:
+    3px 3px 2px #000,
+    -3px 3px 2px #000,
+    -3px -3px 0 #000,
+    3px -3px 0 #000;
+    padding: 137px 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    background-size: cover;
+    color: #ffffff; 
+}
+.hero.index{
+    color:#FF4F02;
+    padding: 287px 0;
+    background-image: url(../image/oyaji2.png);
+    font-size:  100px;
+    animation: sway 2s infinite ease-in-out;
+}
+@keyframes sway {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.hero.goods{
+    padding: 287px 0;
+    background-image: url(../image/oyaji2.png);
+    font-size:  100px;
+}
+.hero.contact{
+    padding: 287px 0;
+    background-image: url(../image/oyaji2.png);
+    font-size:  100px;
+}
+.hero.greeting{
+  padding: 287px 0;
+    background-image: url(../image/oyaji2.png);
+    font-size:  100px;
+}
+
+/*全てのページに適用？　ボディ */
+body{
+    background-image : url(../image/usuibills.jpg) ;
+    background-size : auto ;
+  }
+
+
+/*すべてのページに適用　メイン */
+.ceo{
+    float:left;
+}
+main{
+    margin:90px auto 90px auto;
+    max-width: 1000px;
+}
+main h2{
+    margin: 60px 0 20px 0;
+    border-bottom: 2px solid,#ffbc02;
+    padding: 0 0 5px 0;
+    color:#000000;
+    font: size 1.3rem;
+}
+.gotoreview{
+  text-align: center;
+  gap: 20px;
+  font-size: 30px;
+}
+.daihyou{
+  font-size:  25px;
+}
+.ayashii{
+  font-size:  10px;
+}
+.fade-in-text {
+  position: relative;
+  font-size: 16px;
+  opacity: 0; /* 初めは透明に設定 */
+  transform: translateY(100%); /* 下からスライドするために位置を下に設定 */
+  animation: fadeInFromBottom 5s forwards; /* フェードインアニメーションの設定 */
+}
+.fade-in-text2 {
+  position: relative;
+  font-size: 16px;
+  opacity: 0; /* 初めは透明に設定 */
+  transform: translateY(100%); /* 下からスライドするために位置を下に設定 */
+  animation: fadeInFromBottom 3s forwards; /* フェードインアニメーションの設定 */
+}
+
+@keyframes fadeInFromBottom {
+  to {
+    opacity: 1; /* アニメーション終了時に完全に表示 */
+    transform: translateY(0); /* アニメーション終了時の位置 */
+  }
+}
+.underlined-text {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.underlined-text::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #800000;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  animation: underlineDelay 1s 1 3s ease-in-out forwards; /* 遅延とアニメーションの設定 */
+}
+
+@keyframes underlineDelay {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+.text {
+  overflow: hidden;
+}
+
+.text span {
+  color:#FF4F02;
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100%);
+  animation: slideInFromBottom 0.5s forwards;
+  animation-delay: 1s; /* 0.1秒ずつ遅延して表示 */
+}
+
+@keyframes slideInFromBottom {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.kusomessage{
+  text-align:center;
+  font-size: 20px;
+}
+
+/*すべてのページに適用　フッター */
+footer{
+  padding-top: 40px;
+    background-image: url(../image/yakiniku1.png);
+    background-repeat: repeat-x;
+}
+.gotop{
+    text-align: center;
+}
+.copyright{
+    text-align:center;
+    font-size:  10px; 
+}
+.kuso{
+  font-size:5;
+  color: #000000;
+  text-align: right;
+}
+
+
+
+.sns{
+  position:sns;
+  display: flex;
+    list-style: none;
+}
+.md-flex {
+  display: flex;
+  padding-left:0;
+  text-align: center;
+}
+
+.md-flex li {
+  margin-left: 16px;
+  list-style:none;
+}
+
+
+/*個別のスタイル */
+/*index.html */
+.shop-info{
+    border-collapse: collapse;
+    margin: auto;
+}
+.shop-info th,.shop-info td{
+    border:1px solid #dbdbdb;
+    padding: 20px;
+}
+.shop-info th{
+    width: 112px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.matrix .bg-wrap,
+.matrix .bg-wrap .inn {
+  display: block;
+}
+ 
+.matrix .bg-wrap {
+  overflow: hidden;
+  opacity: 0;
+}
+ 
+.matrix .bg-wrap + .bg-wrap {
+  margin-top: 10px;
+}
+ 
+.matrix .bg-wrap .inn.large {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+ 
+.matrix .bg-wrap .inn {
+  opacity: 0;
+  transform: matrix(1, 0, 0, 1, 0, 100);
+  transition: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+ 
+.matrix.is-animated .bg-wrap {
+  opacity: 1;
+}
+ 
+.matrix.is-animated .bg-wrap .inn {
+  opacity: 1;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.gaiyo{
+  text-align: center;
+}
+p a img{filter:grayscale(100%);
+}
+p a img:hover{
+	filter:grayscale(0);
+	transition:0.3s;
+  transform:scale(1.2);
+}
+/*goods.html*/
+.items{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+p1 a{ overflow:hidden; }
+p1 a img:hover{
+	transform:scale(1.1);
+	transition:0.3s;
+}
+/*review.html*/
+
+/*greeting.html*/
+p2 a{ overflow:hidden; }
+p2 a img{ transform:scale(1.3); }
+p2 a img:hover{
+	transform:scale(1);
+	transition:0.3s;
+}
+
+
+/*contact.html */
+h2{
+    text-align: center;
+}
+
+form{
+    margin: 0 auto;
+    max-width: 640px;
+    }
+input[type="text"], textarea{
+    padding: 6px;
+    width: 100%;
+    font-size: 1rem;
+}
+textarea{
+    height: 140px;
+}
+.submit{
+    text-align: center;
+}
+input[type="submit"]{
+    border:none;
+    padding:20px;
+    width: 200px;
+    background-color: #253958;
+    color:#ffffff;
+    font-size: 1rem;
+}
+.contactmap{
+  text-align: center;
+}
+
+/*モバイル対応*/
+@media(max-width: 767px){
+ .nav ul{
+    flex-wrap: wrap;
+    gap: 20px;
+ }
+ main{
+    padding: 0 4%;
+ } 
+ /* index.html */
+ .hero.index{
+    padding:28vh 0;
+ }
+ /* menu.html*/
+ .items{
+    grid-template-columns: 1fr 1fr;
+ }  
+}
+/*代表の写真*/
+.blur, .blur > img {
+    margin: 0; padding: 0;
+    border: 0;
+}
+
+.blur {
+    position: relative;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+}
+
+.blur:after {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    -moz-box-shadow: inset 0px 0px 15px 15px #fff;
+    -webkit-box-shadow: inset 0px 0px 15px 15px #fff;
+    box-shadow: inset 0px 0px 15px 15px #fff;
+    content: " ";
+}
+
+/* 代表の写真と略歴の横並び */
+
+.flex {
+    display: flex; /*横並び*/
+  }
+  .flex .image {
+    width: 640px; /*画像サイズ指定*/
+    margin: 0;
+    padding: 0;
+  }
+  .flex .image img {
+    width: 100%;
+    height: auto;
+  }
+  .flex .text {
+    margin: 0 0 0 20px;
+    padding: 0;
+  }
+  
+  body {
+    margin: 20px;
+    padding: 0;
+  } 
+
+  /*代表の自己紹介*/
+
+  /* 自己紹介 */
+
+/* カード全体 */
+
+  
+.writer-profile-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    box-shadow: 5px 10px 20px rgba(0,0,0,0.25);
+  }
+  
+   
+  
+  /* カードの右・左共通 */
+  .wp-left, .wp-right {
+    padding: 15px 10px;
+  }
+  /* カードの左側 */
+  .wp-left {
+    width: 35%;
+    border-right: 2px dashed #eee;
+    text-align: center;
+  }
+  /* カードの右側 */
+  .wp-right {
+    width: 45%;
+  }
+  
+  /* 代表の枠 */
+  .wp-label{
+    border: none;
+    border-radius: 50%;
+    background: rgb(252, 228, 109);
+    box-shadow:
+    0 1.9px 2.5px rgba(0, 0, 0, 0.057),
+    0 5px 6.1px rgba(0, 0, 0, 0.076),
+    0 10.1px 11.4px rgba(0, 0, 0, 0.086),
+    0 19.2px 19.8px rgba(0, 0, 0, 0.092),
+    0 38.4px 34.8px rgba(0, 0, 0, 0.1),
+    0 101px 74px rgba(0, 0, 0, 0.13);
+    
+  }
+ 
+ 
+  /* 三角 */
+ /* .wp-label::before,
+  .wp-label::after {
+    content: '';
+    border: 14px solid transparent;
+    position: absolute;
+    left: 50%;
+    margin-left: -14px;
+  }
+  /* 線 */
+  /*.wp-label::before {
+    border-top-color: #222;
+    bottom: -28px;
+  }
+  /* 地 */
+  /*.wp-label::after {
+    border-top-color: #fff;
+    bottom: -27px;
+  }
+  /* 吹き出し内のテキスト */
+  .wp-label p {
+    color: #222;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+  
+  /* 画像 */
+  .blur, .blur > img {
+    margin: 0; padding: 0;
+    border: 0;
+}
+  /* 名前 */
+  .wp-name {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000000;
+    margin-bottom: 5px;
+    font-family:cursive;
+  }
+  /*ふりがな*/
+  .wp-furi{
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #000000;
+    margin-bottom: 5px;
+    font-family:"cursive";
+
+  }
+  /* 職業 */
+  .wp-job {
+    color: #7b7b7b;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+  
+  /* 右側 */
+  
+  /* リストを左揃え・中央寄せに */
+  .ul-center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  /* 最後の要素にだけ下に余白をつけない */
+  .ul-center ul li:not(:last-child) {
+    padding-bottom: 3px;
+  }
+  
+  /* リストの文字色 */
+  .ul-center ul .li-point {
+    color: #7b7b7b;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
+  
+  /* 文章を左揃え・中央寄せに */
+  .wp-content {
+    width: 60%;
+    text-align: left;
+    display: block;
+  }
+  /* 文章 */
+  .wp-content p {
+    text-align: left;
+    display: inline-block;
+    color: #7b7b7b;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+  /* SNSボタン全体 */
+  .wp-sns {
+    text-align: center;
+    padding: 20px 0 0;
+  }
+  /* SNSボタン */
+  .wp-sns li {
+    display: inline-block;
+    border: 1px solid #222;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 0 3px;
+  }
+  /* SNSボタンにマウスをあてた時の挙動 */
+  .wp-sns li:hover{
+    position: relative;
+    top: 1px;
+  }
+  /* SNSアイコン */
+  .wp-sns li a i {
+    font-size: 19px;
+    color: #222;
+  }
+  /* SNSアイコンの位置 */
+  .wp-sns li a i::before {
+    position: relative;
+    top: 9px;
+  }
+  /*カスタマーレビュー*/
+  .reviewtitle{
+    font-size: 30;
+  }
+
+  .review-section {
+    background-image : url(../image/backgroundmoney.png) ;
+    padding: 3rem 0;
+   }
+   .review-section h2 {
+    text-align: center;
+    letter-spacing: 0.9rem;
+   }
+   .review-section ul {
+    max-width: 1000px;
+    list-style-type: none;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+   }
+   .review-section li {
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    gap: 1.5rem;
+    border-top: 1px solid #ccc;
+    padding: 1rem 0;
+   }
+   .review-section li:last-child {
+    border-bottom: 1px solid #ccc;
+   }
+   .review-section .user,
+   .review-section .item {
+    max-width: 100%;
+   }
+   .review-section .user {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: solid 1px #eee;
+   }
+   .review-area {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+   }
+   .review-area p {
+    margin: 0;
+   }
+   .review-area .name,
+   .review-area .date,
+   .review-section a {
+    font-size: 0.8rem;
+   }
+   .review-area .star5:before {
+    content: '★★★★★';
+    font-size: 1.2rem;
+    background: #cda85a;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+   }
+   .review-area .star4-5:before {
+    content: '★★★★★';
+    font-size: 1.2rem;
+    background: linear-gradient(to right, #cda85a 90%, #d9d9d9 91%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+   }
+   .review-area .star4:before {
+    content: '★★★★★';
+    font-size: 1.2rem;
+    background: linear-gradient(to right, #cda85a 80%, #d9d9d9 81%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+   }
+   .review-area .star3-5:before {
+    content: '★★★★★';
+    font-size: 1.2rem;
+    background: linear-gradient(to right, #cda85a 70%, #d9d9d9 71%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+   }
+   .review-area .star3:before {
+    content: '★★★★★';
+    font-size: 1.2rem;
+    background: linear-gradient(to right, #cda85a 60%, #d9d9d9 61%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+   }
+   .review-area .comment {
+    text-align: justify;
+    position: relative;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+   }
+   .review-section a {
+    text-align: center;
+   }
+  
+  
+
+  /* 767px（iPad）以下 */
+  
+  @media (max-width: 767px) {
+    /* カードを縦並びに */
+    .writer-profile-card {
+      display: block;
+    }
+    /* 左右の幅を100%に */
+    .wp-left, .wp-right {
+      width: 100%;
+      padding: 35px 20px;
+    }
+    /* 点線を左から下に */
+    .wp-left {
+      border-right: none;
+      border-bottom: 2px dashed #eee;
+    }
+
+    /*カスタマーレビューメディア*/
+    .review-section li {
+        display: block;
+       }
+       .review-section .user,
+       .review-section .item {
+        display: none;
+       }
+       .review-area {
+        margin-bottom: 0.5rem;
+       }
+       .review-section a {
+        font-size: inherit;
+       }
+  }
+  
